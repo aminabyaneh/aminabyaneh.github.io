@@ -54,37 +54,33 @@ interests:
   - Learning Dynamical Systems
 
 education:
-  # - area: PhD Artificial Intelligence
-  #   institution: Stanford University
-  #   date_start: 2016-01-01
-  #   date_end: 2020-12-31
-  #   summary: |
-  #     Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-  #   button:
-  #     text: 'Read Thesis'
-  #     url: 'https://example.com'
-  # - area: MEng Artificial Intelligence
-  #   institution: Massachusetts Institute of Technology
-  #   date_start: 2016-01-01
-  #   date_end: 2020-12-31
-  #   summary: |
-  #     GPA: 3.8/4.0
+  - area: PhD, ECE, Robotics
+    institution: McGill University
+    date_start: 2021-09-15
+    date_end: Ongoing
+    summary: |
+      Thesis on safe and stable imitation through learning dynamical systems. Supervised by Hsiu-Chin Lin.
+    # button:
+    #   text: 'Read Thesis'
+    #   url: 'https://example.com'
+  - area: BSc, ECE
+    institution: Sharif University of Technology
+    date_start: 2015-09-01
+    date_end: 2020-02-31
+    summary: |
+      GPA: 3.7/4.0
 
-  #     Courses included:
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  # - area: BSc Artificial Intelligence
-  #   institution: Massachusetts Institute of Technology
-  #   date_start: 2016-01-01
-  #   date_end: 2020-12-31
-  #   summary: |
-  #     GPA: 3.4/4.0
+    # Courses included:
+    # - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    # - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    # - lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - area: Minor, CS
+    institution: Sharif University of Technology
+    date_start: 2018-09-01
+    date_end: 2020-02-31
+    summary: |
+      GPA: 3.7/4.0
 
-  #     Courses included:
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
 work:
   # - position: Director of Cloud Infrastructure
   #   company_name: GenCoin
