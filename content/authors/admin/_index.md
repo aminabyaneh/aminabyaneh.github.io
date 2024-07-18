@@ -33,18 +33,13 @@ profiles:
   - icon: at-symbol
     url: 'mailto:amin.abyaneh@mail.mcgill.ca'
     label: E-mail Me!
-  # - icon: brands/x
-  #   url: https://twitter.com/GetResearchDev
-  # - icon: brands/instagram
-  #   url: https://www.instagram.com/
+
   - icon: brands/github
     url: https://github.com/aminabyaneh
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/amin-abyaneh-02a255123/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=IAk7JAYAAAAJ&hl=en
-  # - icon: academicons/orcid
-  #   url: https://orcid.org/
 
 interests:
   - Imitation Learning
@@ -66,7 +61,7 @@ education:
   - area: BSc, ECE
     institution: Sharif University of Technology
     date_start: 2015-09-01
-    date_end: 2020-02-31
+    date_end: 2020-02-27
     summary: |
       GPA: 3.7/4.0
 
@@ -77,7 +72,7 @@ education:
   - area: Minor, CS
     institution: Sharif University of Technology
     date_start: 2018-09-01
-    date_end: 2020-02-31
+    date_end: 2020-02-27
     summary: |
       GPA: 3.7/4.0
 
