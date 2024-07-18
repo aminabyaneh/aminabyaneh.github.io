@@ -57,7 +57,7 @@ education:
   - area: PhD, ECE, Robotics
     institution: McGill University
     date_start: 2021-09-15
-    date_end: Ongoing
+    date_end: ''
     summary: |
       Thesis on safe and stable imitation through learning dynamical systems. Supervised by Hsiu-Chin Lin.
     # button:
@@ -82,29 +82,22 @@ education:
       GPA: 3.7/4.0
 
 work:
-  # - position: Director of Cloud Infrastructure
-  #   company_name: GenCoin
-  #   company_url: ''
-  #   company_logo: ''
-  #   date_start: 2021-01-01
-  #   date_end: ''
-  #   summary: |2-
-  #     Responsibilities include:
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  # - position: Backend Software Engineer
-  #   company_name: X
-  #   company_url: ''
-  #   company_logo: ''
-  #   date_start: 2016-01-01
-  #   date_end: 2020-12-31
-  #   summary: |
-  #     Responsibilities include:
-  #     - Migrated infrastructure to a new data center
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-
+  - position: NCCR Fellowship Researcher
+    company_name: EPFL, Switzerland
+    company_url: https://www.epfl.ch/labs/decode/
+    company_logo: ''
+    date_start: 2024-05-01
+    date_end: ''
+    summary: |
+      Employing globally contractive neural architectures for safe and predictable imitation learning.
+  - position: Mitacs Accelerate Fellowship Researcher
+    company_name: Sycodal, Montreal
+    company_url: ''
+    company_logo: ''
+    date_start: 2023-11-01
+    date_end: ''
+    summary: |
+      Developing safe reinforcement learning methods in Isaac Sim and Isaac Lab simulators.
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
@@ -112,16 +105,9 @@ skills:
     items:
       - name: Python
         description: ''
-        percent: 80
-        icon: code-bracket
-      - name: Data Science
-        description: ''
         percent: 100
-        icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: circle-stack
+        icon: code-bracket
+
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
@@ -130,14 +116,14 @@ skills:
         description: ''
         percent: 60
         icon: person-simple-walk
-      # - name: Cats
+      # - name: Cycling
       #   description: ''
       #   percent: 100
-      #   icon: cat
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera
+      #   icon:
+      # - name: Photography
+      #   description: ''
+      #   percent: 80
+      #   icon: camera
 
 languages:
   - name: English
