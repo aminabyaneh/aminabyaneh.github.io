@@ -2,9 +2,6 @@
 # Display name
 title: Amin Abyaneh
 
-# # Name pronunciation (optional)
-# name_pronunciation: Chien Shiung Wu
-
 # Full name (for SEO)
 first_name: Amin
 last_name: Abyaneh
@@ -58,12 +55,17 @@ education:
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com'
+<<<<<<< HEAD
   - area: BSc, ECE
+=======
+  - area: BSc, ECE, Digital Systems
+>>>>>>> 397d853 (Fix the bug in the template, add Experience section)
     institution: Sharif University of Technology
     date_start: 2015-09-01
     date_end: 2020-02-27
     summary: |
       GPA: 3.7/4.0
+<<<<<<< HEAD
 
     # Courses included:
     # - lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -76,6 +78,15 @@ education:
     summary: |
       GPA: 3.7/4.0
 
+=======
+  - area: Minor, CS, Artificial Intelligence
+    institution: Sharif University of Technology
+    date_start: 2018-09-01
+    date_end: 2020-02-27
+    summary: |
+      GPA: 3.7/4.0
+
+>>>>>>> 397d853 (Fix the bug in the template, add Experience section)
 work:
   - position: NCCR Fellowship Researcher
     company_name: EPFL, Switzerland
@@ -93,33 +104,57 @@ work:
     date_end: ''
     summary: |
       Developing safe reinforcement learning methods in Isaac Sim and Isaac Lab simulators.
+  - position: Research intern and Visiting researcher at Max-Planck Institute
+    company_name: Tübingen, Germany
+    company_url: 'https://is.mpg.de/'
+    company_logo: ''
+    date_start: 2019-07-01
+    date_end: 2019-07-01
+    summary: |
+      Reinforcement learning for dexterous manipulation, federated learning, and distributed systems.
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
   - name: Technical Skills
     items:
-      - name: Python
+      - name: 🐍 Python, C/C++
         description: ''
         percent: 100
-        icon: code-bracket
-
+        icon:
+      - name: 🧑🏻‍💻 Nvidia Isaac Sim
+        icon:
+      - name: 🤖 ROS (1, 2)
+        description: ''
+        percent: 100
+        icon:
+      - name: 🧑🏻‍💻 Isaac Gym, Isaac Lab
+        icon:
+      - name: 🖥 Pytorch, Tensorflow
+        icon:
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: ⛰ Hiking
         description: ''
         percent: 60
-        icon: person-simple-walk
-      # - name: Cycling
-      #   description: ''
-      #   percent: 100
-      #   icon:
-      # - name: Photography
-      #   description: ''
-      #   percent: 80
-      #   icon: camera
-
+        icon:
+      - name: 🚴 Cycling
+        description: ''
+        percent: 100
+        icon:
+      - name: 🎶 Flamenco
+        description: ''
+        percent: 80
+        icon:
+      - name: 🧗 Climbing
+        description: ''
+        percent: 80
+        icon:
+      - name: 📸 Photography
+        description: ''
+        percent: 80
+        icon:
 languages:
   - name: English
     percent: 100
@@ -134,14 +169,50 @@ languages:
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 
 awards:
-  # - title: Neural Networks and Deep Learning
-  #   url: https://www.coursera.org/learn/neural-networks-deep-learning
-  #   date: '2023-11-25'
-  #   awarder: Coursera
-  #   icon: coursera
-  #   summary: |
-  #     I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks;
+  - title: Fonds de recherche du Québec (FRQ)
+    url: https://frq.gouv.qc.ca/
+    date: '2024-04-25'
+    awarder: Government of Quebec, Canada
+    summary: |
+      4-year award offered by the Quebec's government to selected doctoral candidates.
 
+  - title: NCCR Automation Fellowship
+    url: https://nccr-automation.ch/research-fellowship
+    date: '2024-02-15'
+    awarder: Swiss National Centers of Competence in Research (NCCR)
+    summary: |
+      Awarded by the Swiss National Centers of Competence in Research to selected international researchers.
+
+  - title: MITACS Accelerate Fellowship
+    url: https://nccr-automation.ch/research-fellowship
+    date: '2023-09-10'
+    awarder: Mitacs
+    summary: |
+      Awarded by MITACS Canada to conduct high-caliber research with an industrial partner.
+
+
+  - title: McGill Engineering (Direct) Doctoral Award (MEDA)
+    url: https://www.mcgill.ca/engineering/students/graduate-students/funding/meda
+    date: '2023-11-10'
+    awarder: Mitacs
+    summary: |
+      4-year scholarship with an acceptance rate of below 2 percent for direct admissions to doctoral program.
+
+  - title: Thomas and Penelope Deirdre Szirtes Fellowships in Engineering (SFE)
+    url: https://www.mcgill.ca/internalawards/faculty/engineering
+    date: '2023-09-10'
+    awarder: Mitacs
+    summary: |
+      Awarded by the Faculty of Engineering on the basis of academic merit to graduate students.
+
+  - title: McGill Graduate Excellence Fellowship (GEF)
+    url: https://www.mcgill.ca/engineering/students/graduate-students/funding/gef
+    date: '2022-02-10'
+    awarder: McGill University
+    summary: |
+      Winner of the award for two consecutive years due to excellent academic performance.
+
+---
 ## About Me
 
-Hey there! I'm Amin! A PhD student at McGill University's Mobile Robotics Lab (MRL). My research is focused on imitation and reinforcement learning with safety certificates and applied to real-world robotic systems.
+Hey there! I'm Amin! Currently a PhD student at McGill University's Mobile Robotics Lab (MRL). My research is focused on imitation and reinforcement learning with safety certificates and applied to real-world robotic systems. Here you can find a summary of my recent and previous work and experiences.
