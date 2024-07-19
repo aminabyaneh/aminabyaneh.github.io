@@ -55,30 +55,12 @@ education:
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com'
-<<<<<<< HEAD
-  - area: BSc, ECE
-=======
   - area: BSc, ECE, Digital Systems
->>>>>>> 397d853 (Fix the bug in the template, add Experience section)
     institution: Sharif University of Technology
     date_start: 2015-09-01
     date_end: 2020-02-27
     summary: |
       GPA: 3.7/4.0
-<<<<<<< HEAD
-
-    # Courses included:
-    # - lorem ipsum dolor sit amet, consectetur adipiscing elit
-    # - lorem ipsum dolor sit amet, consectetur adipiscing elit
-    # - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: Minor, CS
-    institution: Sharif University of Technology
-    date_start: 2018-09-01
-    date_end: 2020-02-27
-    summary: |
-      GPA: 3.7/4.0
-
-=======
   - area: Minor, CS, Artificial Intelligence
     institution: Sharif University of Technology
     date_start: 2018-09-01
@@ -86,7 +68,6 @@ education:
     summary: |
       GPA: 3.7/4.0
 
->>>>>>> 397d853 (Fix the bug in the template, add Experience section)
 work:
   - position: NCCR Fellowship Researcher
     company_name: EPFL, Switzerland
