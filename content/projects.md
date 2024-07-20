@@ -11,13 +11,37 @@ design:
 sections:
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: 'Selected Projects'
+      text: Projects concluded recently as a part of my PhD.
       filters:
         folders:
-          - project
+          - project-featured
     design:
       view: article-grid
       fill_image: false
-      columns: 3
+      columns: 2
+
+  # - block: collection
+  #   content:
+  #     title: 'Ongoing Projects'
+  #     text: Actively working on these projects at the moment.
+  #     filters:
+  #       folders:
+  #         - project
+  #   design:
+  #     view: article-grid
+  #     fill_image: false
+  #     columns: 2
+
+  # - block: collection
+  #   content:
+  #     title: 'Past Projects'
+  #     text: Past projects related or unrelated to my current research.
+  #     filters:
+  #       folders:
+  #         - project
+  #   design:
+  #     view: article-grid
+  #     fill_image: false
+  #     columns: 2
 ---

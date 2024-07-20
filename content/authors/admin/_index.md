@@ -120,6 +120,10 @@ skills:
         description: ''
         percent: 60
         icon:
+      - name: 🏐 Volleyball
+        description: ''
+        percent: 100
+        icon:
       - name: 🚴 Cycling
         description: ''
         percent: 100
@@ -134,7 +138,7 @@ skills:
         icon:
       - name: 📸 Photography
         description: ''
-        percent: 80
+        percent: 20
         icon:
 languages:
   - name: English
@@ -196,4 +200,4 @@ awards:
 ---
 ## About Me
 
-Hey there! I'm Amin! Currently a PhD student at McGill University's Mobile Robotics Lab (MRL). My research is focused on imitation and reinforcement learning with safety certificates and applied to real-world robotic systems. Here you can find a summary of my recent and previous work and experiences.
+Hey there! I'm Amin! Currently a PhD student at McGill University's Mobile Robotics Lab. My research is focused on imitation and reinforcement learning with safety certificates and applied to real-world robotic systems. Here you can find a summary of my recent and previous work and experiences.
