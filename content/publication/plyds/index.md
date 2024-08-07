@@ -30,6 +30,7 @@ abstract: Imitation learning is a paradigm to address complex motion planning pr
 summary: We present an approach for learning policies represented by globally stable nonlinear dynamical systems. We model the nonlinear dynamical system as a parametric polynomial and learn the polynomial's coefficients jointly with a learnable Lyapunov candidate to guarantee stability and predictability of the policy.
 
 tags:
+  - Conference on Robot Learning (CoRL'23)
   - Imitation Learning
   - Robot Learning
   - Lyapunov theory

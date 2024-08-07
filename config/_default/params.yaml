@@ -13,9 +13,9 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    org_name: 'McGill University, EPFL'
+    description: 'Personal portfolio of Amin Abyaneh, a PhD candidate at McGill University.'
+    twitter: 'aminabyaneh'
   analytics:
     google_analytics: ''
     baidu_tongji: ''

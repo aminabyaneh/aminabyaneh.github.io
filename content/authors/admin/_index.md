@@ -93,60 +93,7 @@ work:
     date_end: 2019-07-01
     summary: |
       Reinforcement learning for dexterous manipulation, federated learning, and distributed systems.
-# Skills
-# Add your own SVG icons to `assets/media/icons/`
-skills:
-  - name: Technical Skills
-    items:
-      - name: 🐍 Python, C/C++
-        description: ''
-        percent: 100
-        icon:
-      - name: 🧑🏻‍💻 Nvidia Isaac Sim
-        icon:
-      - name: 🤖 ROS (1, 2)
-        description: ''
-        percent: 100
-        icon:
-      - name: 🧑🏻‍💻 Isaac Gym, Isaac Lab
-        icon:
-      - name: 🖥 Pytorch, Tensorflow
-        icon:
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: ⛰ Hiking
-        description: ''
-        percent: 60
-        icon:
-      - name: 🏐 Volleyball
-        description: ''
-        percent: 100
-        icon:
-      - name: 🚴 Cycling
-        description: ''
-        percent: 100
-        icon:
-      - name: 🎶 Flamenco
-        description: ''
-        percent: 80
-        icon:
-      - name: 🧗 Climbing
-        description: ''
-        percent: 80
-        icon:
-      - name: 📸 Photography
-        description: ''
-        percent: 20
-        icon:
-languages:
-  - name: English
-    percent: 100
-  - name: Farsi
-    percent: 100
-  - name: French
-    percent: 25
+
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -197,7 +144,133 @@ awards:
     summary: |
       Winner of the award for two consecutive years due to excellent academic performance.
 
+# Skills
+# Add your own SVG icons to `assets/media/icons/`
+skills:
+  - name: Technical Skills
+    items:
+      - name: 🐍 Python
+        description: ''
+        percent: 100
+        icon:
+
+      - name: 👨🏻‍💻 C/C++
+        description: ''
+        percent: 90
+        icon:
+
+      - name: 📟 Nvidia Isaac Gym, Isaac Lab, Isaac Sim
+        description: ''
+        percent: 80
+        icon:
+
+      - name: 🤖 ROS (1, 2)
+        description: ''
+        percent: 90
+        icon:
+
+      - name: 🖥 Pytorch
+        description: ''
+        percent: 100
+        icon:
+
+      - name: 🧮 Matlab
+        description: ''
+        percent: 50
+        icon:
+
+      - name: 🖥 Java
+        description: ''
+        percent: 30
+        icon:
+
+      - name: 🕹️ Gazebo
+        description: ''
+        percent: 80
+        icon:
+
+      - name: 🦾 Kinova Gen3, Gen2, Link6
+        description: ''
+        percent: 100
+        icon:
+
+      - name: 🦾 Franka Panda
+        description: ''
+        percent: 20
+        icon:
+
+  - name: ''
+  - name: Knowledge
+    color: '#eeac02'
+    color_border: '#f0bf23'
+    items:
+      - name: 🧠 Reinforcement Learning
+        description: ''
+        percent: 100
+        icon:
+
+      - name: 🧠 Deep and Statistical Learning
+        description: ''
+        percent: 90
+        icon:
+
+      - name: 🤖 Robot Learning
+        description: ''
+        percent: 100
+        icon:
+
+      - name: 🌐 Generative AI
+        description: ''
+        percent: 50
+        icon:
+
+      - name: 🤖 Imitation Learning
+        description: ''
+        percent: 100
+        icon:
+
+      - name: 𓇲 Embedded Systems
+        description: ''
+        percent: 60
+        icon:
+
+      - name: 𓇲 Digital Systems
+        description: ''
+        percent: 70
+        icon:
+
+      - name: 🦾 Dexterous Manipulation
+        description: ''
+        percent: 90
+        icon:
+
+      - name: 🦾 Motion Planning
+        description: ''
+        percent: 90
+        icon:
+
+      - name: 🕹️ Optimal and Robust Control
+        description: ''
+        percent: 80
+        icon:
+
+languages:
+  - name: English
+    percent: 95
+  - name: Farsi
+    percent: 100
+  - name: French
+    percent: 25
+
 ---
 ## About Me
 
-Hey there! I'm Amin! Currently a PhD student at McGill University's Mobile Robotics Lab. My research is focused on imitation and reinforcement learning with safety certificates and applied to real-world robotic systems. Here you can find a summary of my recent and previous work and experiences.
+Hi there! I'm Amin, a PhD student at McGill University's Mobile Robotics Lab. My research focuses on imitation and reinforcement learning with safety certificates, applied to real-world robotic systems. Here, you can find a summary of my recent and previous work and experiences.
+
+
+<!-- ⛰ Hiking
+🏐 Volleyball
+🚴 Cycling
+🎶 Flamenco
+🧗 Climbing
+📸 Photography -->

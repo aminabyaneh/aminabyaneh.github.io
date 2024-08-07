@@ -6,7 +6,9 @@ title: 'Globally Stable Neural Imitation Policies'
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - admin
+  - Mariana Sosa
   - Hsiu-Chin Lin
+
 
 date: '2024-05-10T00:00:00Z'
 doi: ''
@@ -27,10 +29,10 @@ abstract: Imitation learning presents an effective approach to alleviate the res
 
 
 # Summary. An optional shortened abstract.
-summary: In this project, we developed the Stable Neural Dynamical System (SNDS) to improve imitation learning by ensuring stability of the trained policy. Our approach uses a neural policy architecture based on the Lyapunov theorem to provide formal stability guarantees. We jointly train the policy and a Lyapunov candidate to ensure global stability.
+summary: In this project, we developed the Stable Neural Dynamical System (SNDS) to improve imitation policies by ensuring stability of the trained policy. Our approach uses a neural policy architecture based on the Lyapunov theorem to provide formal stability guarantees. We jointly train the policy and a Lyapunov candidate to ensure global stability.
 
 tags:
-  - Imitation Learning
+  - IEEE International Conference on Robotics and Automation (ICRA'2024)
   - Safe Learning
   - Robot Learning
   - Lyapunov theory

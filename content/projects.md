@@ -15,7 +15,7 @@ sections:
       text: Projects concluded recently as a part of my PhD.
       filters:
         folders:
-          - project-featured
+          - project
     design:
       view: article-grid
       fill_image: false
