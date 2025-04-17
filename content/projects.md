@@ -12,7 +12,7 @@ sections:
   - block: collection
     content:
       title: 'Selected Projects'
-      text: Projects concluded recently as a part of my PhD.
+      text: Projects concluded or in progress as a part of my PhD.
       filters:
         folders:
           - project

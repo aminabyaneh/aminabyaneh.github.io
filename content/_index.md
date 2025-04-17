@@ -32,10 +32,10 @@ sections:
           parallax: false
   - block: markdown
     content:
-      title: '📚 Research Overview 📚'
+      title: 'Research Overview'
       subtitle: ''
       text: |-
-        I believe that prioritizing research into the safety of decision-making systems will enable the swift and responsible real-world deployment of cutting-edge AI advancements. My research is focused on **safe and robust imitation and reinforcement learning**, with a special emphasis on two key areas: out-of-distribution recovery and generalization through dynamical systems. But it's not just about advancing theory; it’s about ensuring the practical deployment of safe and reliable policies into a variety of real-world robotic systems, mainly manipulator arms.
+        I believe that prioritizing research into the safety of decision-making systems will enable the swift and responsible real-world deployment of cutting-edge AI advancements. My research is focused on **safe and robust imitation and reinforcement learning for robotic systems**, with a special emphasis on two key areas: out-of-distribution recovery and generalization through neural ordinary differential equations. This not just about advancing theory; it is about ensuring the practical deployment of safe and reliable policies into a variety of real-world robotic systems.
 
         If anything that you see here sounds interesting to you, please reach out to ask questions or collaborate 😃
     design:
@@ -73,29 +73,29 @@ sections:
   #   design:
   #     view: article-grid
   #     columns: 1
-  # - block: collection
-  #   id: news
-  #   content:
-  #     title: Recent News
-  #     subtitle: ''
-  #     text: ''
-  #     # Page type to display. E.g. post, talk, publication...
-  #     page_type: post
-  #     # Choose how many pages you would like to display (0 = all pages)
-  #     count: 5
-  #     # Filter on criteria
-  #     filters:
-  #       author: ""
-  #       category: ""
-  #       tag: ""
-  #       exclude_featured: false
-  #       exclude_future: false
-  #       exclude_past: false
-  #       publication_type: ""
-  #     # Choose how many pages you would like to offset by
-  #     offset: 0
-  #     # Page order: descending (desc) or ascending (asc) date.
-  #     order: desc
+  - block: collection
+    id: news
+    content:
+      title: Recent News
+      subtitle: ''
+      text: ''
+      # Page type to display. E.g. post, talk, publication...
+      page_type: post
+      # Choose how many pages you would like to display (0 = all pages)
+      count: 2
+      # Filter on criteria
+      filters:
+        author: ""
+        category: ""
+        tag: ""
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+        publication_type: ""
+      # Choose how many pages you would like to offset by
+      offset: 0
+      # Page order: descending (desc) or ascending (asc) date.
+      order: desc
   #   design:
   #     # Choose a layout view
   #     view: date-title-summary

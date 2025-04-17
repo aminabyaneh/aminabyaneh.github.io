@@ -47,7 +47,7 @@ interests:
 
 education:
   - area: PhD, ECE, Robotics
-    institution: McGill University
+    institution: McGill University | Mila
     date_start: 2021-09-15
     date_end: ''
     summary: |
@@ -74,7 +74,7 @@ work:
     company_url: https://www.epfl.ch/labs/decode/
     company_logo: ''
     date_start: 2024-05-01
-    date_end: ''
+    date_end: '2024-12-29'
     summary: |
       Employing globally contractive neural architectures for safe and predictable imitation learning.
   - position: Mitacs Accelerate Fellowship Researcher
@@ -82,7 +82,7 @@ work:
     company_url: ''
     company_logo: ''
     date_start: 2023-11-01
-    date_end: ''
+    date_end: '2024-11-30'
     summary: |
       Developing safe reinforcement learning methods in Isaac Sim and Isaac Lab simulators.
   - position: Research intern and Visiting researcher at Max-Planck Institute
@@ -90,7 +90,7 @@ work:
     company_url: 'https://is.mpg.de/'
     company_logo: ''
     date_start: 2019-07-01
-    date_end: 2019-07-01
+    date_end: 2022-02-01
     summary: |
       Reinforcement learning for dexterous manipulation, federated learning, and distributed systems.
 
