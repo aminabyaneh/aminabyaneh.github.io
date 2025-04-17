@@ -22,7 +22,7 @@ We will be presenting our work "Contractive dynamical imitation policies for eff
 
 {{< toc mobile_only=true is_open=true >}}
 
-## Summer at NCCR and EPFK
+## Summer at NCCR and EPFL
 This work is the result of an amazing collaboration with EPFL and NCCR Automation. The project's success is owed to dedicated work of senior PhD candidate, [Mahrokh G. Boroujeni](https://people.epfl.ch/mahrokh.ghoddousiboroujeni?lang=en), and Prof. [Giancarlo Ferrari-Trecate](https://www.epfl.ch/labs/decode/), both from EPFL. And of course my supervisor Prof. Hsiu-Chin Lin!
 
 ## Abstract
