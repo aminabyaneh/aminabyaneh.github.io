@@ -80,7 +80,7 @@ params:
         hiddenInSingle: true
     label:
       text: "Amin Abyaneh"
-      icon: icon.png
+      icon: icon.ico
       iconHeight: 18
 
 markup:

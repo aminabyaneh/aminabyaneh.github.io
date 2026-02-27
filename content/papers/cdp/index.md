@@ -14,7 +14,7 @@ cover:
 
 ---
 
-##### Links
+### Links
 
 + [Paper](https://openreview.net/pdf?id=iKJbmx1iuQ)
 + [Project page](https://contractive-diffusion.github.io)
@@ -22,7 +22,7 @@ cover:
 ---
 
 ![CDP advantage over diffusion policy baselines](project_assets/method_large.jpg)
-##### Abstract
+### Abstract
 
 Diffusion policies have emerged as powerful generative models for offline policy learning, where a learned score function guides a stochastic differential equation (SDE) to iteratively denoise actions. However, the same score-based SDE modeling that enables diverse behavior also introduces solver and score-matching errors, large data requirements, and inconsistencies in action generation. While these inaccuracies are often tolerable in image generation, they accumulate in continuous control and can drive the policy off the dataset support, harming performance and safety, especially on real robots.
 
@@ -34,7 +34,7 @@ We evaluate CDPs extensively on continuous-control benchmarks (including D4RL an
 
 ![Concept: contraction in diffusion sampling](project_assets/concept.jpg)
 
-##### Citation
+### Citation
 
 "Contractive Diffusion Policies: Robust Action Diffusion via Contractive Score-Based Sampling with Differential Equations." ICLR 2026, under review.
 
@@ -46,3 +46,4 @@ We evaluate CDPs extensively on continuous-control benchmarks (including D4RL an
   note    = {ICLR 2026 Conference Submission},
   url     = {https://openreview.net/forum?id=iKJbmx1iuQ}
 }
+```
