@@ -1,5 +1,5 @@
-baseURL: "https://pascalmichaillat.org/hugo-website/" 
-title: Moritz-Maria von Igelfeld
+baseURL: "https://aminabyaneh.github.io/"
+title: Amin Abyaneh
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -9,33 +9,28 @@ pagination:
 
 taxonomies:
     tag: tags
+# we have to fix the menu
 
 menu:
     main:
-        - name: Books
-          url: books/
-          weight: 5 
         - name: Papers
           url: papers/
-          weight: 2
-        - name: Courses
-          url: courses/
-          weight: 3
-        - name: Data
-          url: data/
-          weight: 4 
+          weight: 1
+        # - name: Projects # TODO: add projects later
+        #   url: projects/
+        #   weight: 2
         - name: Blog
-          url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-          weight: 6
+          url: blog/
+          weight: 3
 
 params:
-    description: "This website hosts Moritz-Maria von Igelfeld's research papers, books, course materials, data, curriculum vitae, and contact information."
-    author: Moritz-Maria von Igelfeld
-    # googleAnalyticsID: "G-XXXXX"
+    description: "This website hosts Amin Abyaneh's research papers, books, course materials, data, curriculum vitae, and contact information."
+    author: Amin Abyaneh
+    googleAnalyticsID: "G-LE3F13RMP1" # TODO: change later
     DateFormat: "January 2006"
-    defaultTheme: light
+    defaultTheme: dark
     hideFooter: false
-    disableThemeToggle: true
+    disableThemeToggle: false
     ShowShareButtons: false
     ShowReadingTime: false
     disableSpecial1stPost: true
@@ -44,7 +39,7 @@ params:
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["books","courses","papers","data"]
+    MainSections: ["papers", "blog"] # TODO: add projects later
     ShowToc: false
     disableScrollToTop: true
     TocOpen: true
@@ -54,50 +49,29 @@ params:
     math: true
     profileMode:
           enabled: true
-          title: Professor Dr von Igelfeld
-          subtitle: "I am a Professor in the Institute of Romance Philology at the University of Regensburg, Germany. My research focuses on Portuguese irregular verbs. I was a doctoral student of Professor Dr Dieter Vogelsang in Munich, and later a second assistant of Professor Walter Schoeffler-Henschell at the University of Wiesbaden."
-          imageUrl: "picture.jpeg"
+          title: Amin Abyaneh
+          subtitle: "I am a PhD candidate in AI and Robotics at McGill University and Mila. My research focuses on physical intelligence through learning dynamical systems to enable sequential decision making with data-driven models. I study how agents can build internal world models that capture the structure and evolution of their environments, enabling prediction, planning, and control under uncertainty. By bridging dynamical systems, probabilistic modeling, and modern generative methods, I aim to develop principled learning algorithms that scale to real-world decision-making problems."
+          imageUrl: "avatar.jpg"
           imageWidth: 160
           imageHeight: 160
           buttons:
             - name: Papers
               url: papers/
-            - name: Data
-              url: data/
-            - name: Books
-              url: books/
-            - name: Courses
-              url: courses/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
+            - name: Projects
+              url: projects/
             - name: Blog
-              url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+              url: blog/
 
     socialIcons:
-        - name: CV
-          url: cv.pdf
         - name: Email
-          url: mailto:igelfeld@regensburg.edu
-        - name: Zoom
-          url: https://www.zoom.us/my/igelfeld
-        - name: Location
-          url: location/
-        - name: Office Hours
-          url: officehours/
+          url: mailto:amin.abyaneh@mail.mcgill.ca
         - name: Google Scholar
-          url: https://scholar.google.com/citations?user=cL23w-4AAAAJ
+          url: https://scholar.google.com/citations?user=Hq0AYv8AAAAJ&hl=en
         - name: GitHub
-          url: https://github.com/pmichaillat
-        - name: Substack
-          url: https://pmichaillat.substack.com
-        - name: YouTube
-          url: https://www.youtube.com/@pmichaillat
-        - name: Twitter
-          url: https://x.com/pmichaillat
-        - name: Bluesky
-          url: https://bsky.app/profile/pmichaillat.bsky.social
+          url: https://github.com/aminabyaneh
+        - name: LinkedIn
+          url: https://www.linkedin.com/in/amin-abyaneh-02a255123/
+
 
     assets:
         disableScrollBarStyle: true
@@ -105,8 +79,8 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Moritz-Maria von Igelfeld"
-      icon: favicon.ico
+      text: "Amin Abyaneh"
+      icon: icon.png
       iconHeight: 18
 
 markup:
@@ -115,7 +89,7 @@ markup:
             unsafe: true
     highlight:
         guessSyntax: true
-        style: autumn 
+        style: autumn
     tableOfContents:
         endLevel: 2
         ordered: false
