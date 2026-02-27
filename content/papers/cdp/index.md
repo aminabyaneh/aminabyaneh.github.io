@@ -21,18 +21,34 @@ cover:
 
 ---
 
-![CDP advantage over diffusion policy baselines](project_assets/method_large.jpg)
-### Abstract
 
-Diffusion policies have emerged as powerful generative models for offline policy learning, where a learned score function guides a stochastic differential equation (SDE) to iteratively denoise actions. However, the same score-based SDE modeling that enables diverse behavior also introduces solver and score-matching errors, large data requirements, and inconsistencies in action generation. While these inaccuracies are often tolerable in image generation, they accumulate in continuous control and can drive the policy off the dataset support, harming performance and safety, especially on real robots.
+### Why not normal diffusion? 
 
-Contractive Diffusion Policies (CDPs) address this by explicitly promoting **contraction** in the diffusion sampling dynamics. Contraction pulls nearby flows closer together, enhancing robustness to solver and score-matching errors while reducing unwanted action variance. We provide a theoretical analysis linking contraction to reduced error accumulation in diffusion sampling, and derive a practical implementation recipe that augments existing diffusion policy architectures with a single tuned hyperparameter and an efficient contraction loss. CDPs integrate with standard offline RL and imitation-learning backbones with minimal modification and computational overhead.
+Diffusion policies have emerged as powerful generative models for offline policy learning, where a learned score function guides a stochastic differential equation (SDE) to iteratively denoise actions. But the same score-based SDE modeling that enables diverse behavior suffers from solver and score-matching errors and inconsistencies in action generation. These inaccuracies might be tolerable in image generation, but they accumulate in continuous control and can drive the policy off the dataset support, harming performance and safety, especially on real robots.
+
+![Concept: contraction in diffusion sampling](project_assets/concept.png)
+
+### What do we do? 
+
+In Contractive Diffusion Policies (CDPs), we address this by explicitly promoting **contraction** in the diffusion sampling dynamics. Contraction pulls nearby SDE/ODE flows closer together, enhancing robustness to solver and score-matching errors while reducing unwanted action variance. We provide a theoretical analysis linking contraction to reduced error accumulation in diffusion sampling, and derive a practical implementation recipe that augments existing diffusion policy architectures with a single tuned hyperparameter and an efficient contraction loss. 
+
+> CDPs integrate with standard offline RL and imitation-learning backbones with minimal modification and computational overhead.
+
+![CDP advantage over diffusion policy baselines](project_assets/method.png)
+
+
+## Experiments
 
 We evaluate CDPs extensively on continuous-control benchmarks (including D4RL and RoboMimic) and real-world robotic manipulation tasks. Across settings, CDPs often outperform non-contractive diffusion policies, with particularly strong gains in low-data regimes, supporting the view that contraction helps mitigate error accumulation in diffusion-based policy learning.
 
+![CDP advantage over diffusion policy baselines](project_assets/results.png)
+
+And in real world experiments, CDP perform better for tasks that require higher precision. 
+
+![CDP advantage over diffusion policy baselines](project_assets/results_real.png)
+
 ---
 
-![Concept: contraction in diffusion sampling](project_assets/concept.jpg)
 
 ### Citation
 
