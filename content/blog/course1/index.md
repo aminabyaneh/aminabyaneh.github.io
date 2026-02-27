@@ -1,6 +1,6 @@
 ---
 title: "I will be posting soon."
-date: 2003-03-10
+date: 2026-02-10
 aliases:
     - /courses/course2/slides4.pdf
     - /courses/course2/slides1.pdf
@@ -15,8 +15,8 @@ aliases:
     - /courses/course2/quiz3.pdf
     - /courses/course2/quiz4.pdf
     - /courses/course1/ps1.pdf
-tags: ["Romance languages","philology","irregular verbs","Spanish","Portuguese"]
-author: "Moritz-Maria von Igelfeld"
+tags: ["TBA"]
+author: "Amin Abyaneh"
 description: ""
 summary: ""
 cover:
@@ -24,8 +24,8 @@ cover:
     alt: "Villa of Reduced Circumstances"
     relative: true
 editPost:
-    URL: "https://github.com/pmichaillat/hugo-website"
-    Text: "Course portal"
+    URL: ""
+    Text: ""
 showToc: true
 disableAnchoredHeadings: false
 

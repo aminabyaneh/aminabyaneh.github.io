@@ -2,11 +2,11 @@
 title: "Contractive Diffusion Policies: Robust Action Diffusion via Contractive Score-Based Sampling with Differential Equations"
 date: 2025-09-15
 tags: ["robotics","reinforcement learning","diffusion policies","contraction theory","stochastic differential equations"]
-author: "Amin_Abyaneh, Charlotte Morissette, Mohamad H. Danesh, Anas Houssaini, David Meger, Gregory Dudek, Hsiu-Chin Lin"
+authors: "Amin Abyaneh, Charlotte Morissette, Mohamad Danesh, Anas Houssaini, David Meger, Gregory Dudek, Hsiu-Chin Lin" 
 description: "Contractive Diffusion Policies (CDPs) promote contraction in the diffusion sampling dynamics for offline policy learning, improving robustness to solver and score-matching errors while reducing unwanted action variance."
 summary: "CDPs add a simple contraction regularizer to diffusion policies, pulling nearby sampling trajectories together to suppress solver and score-matching errors. This yields more robust action generation in offline RL and imitation learning, especially in low-data regimes."
 cover:
-    image: "project_assets/method.jpg"
+    image: "project_assets/method.png"
     alt: "Performance of Contractive Diffusion Policies vs baseline diffusion policies"
     relative: true
 
