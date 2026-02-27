@@ -2,11 +2,11 @@
 title: "Contractive Diffusion Policies: Robust Action Diffusion via Contractive Score-Based Sampling with Differential Equations"
 date: 2025-09-15
 tags: ["robotics","reinforcement learning","diffusion policies","contraction theory","stochastic differential equations"]
-author: "Amin Abyaneh et al"
+author: "Amin_Abyaneh, Charlotte Morissette, Mohamad H. Danesh, Anas Houssaini, David Meger, Gregory Dudek, Hsiu-Chin Lin"
 description: "Contractive Diffusion Policies (CDPs) promote contraction in the diffusion sampling dynamics for offline policy learning, improving robustness to solver and score-matching errors while reducing unwanted action variance."
 summary: "CDPs add a simple contraction regularizer to diffusion policies, pulling nearby sampling trajectories together to suppress solver and score-matching errors. This yields more robust action generation in offline RL and imitation learning, especially in low-data regimes."
 cover:
-    image: "project_assets/method_large.jpg"
+    image: "project_assets/method.jpg"
     alt: "Performance of Contractive Diffusion Policies vs baseline diffusion policies"
     relative: true
 
@@ -22,7 +22,7 @@ cover:
 ---
 
 
-### Why not normal diffusion? 
+### Why not vanilla diffusion? 
 
 Diffusion policies have emerged as powerful generative models for offline policy learning, where a learned score function guides a stochastic differential equation (SDE) to iteratively denoise actions. But the same score-based SDE modeling that enables diverse behavior suffers from solver and score-matching errors and inconsistencies in action generation. These inaccuracies might be tolerable in image generation, but they accumulate in continuous control and can drive the policy off the dataset support, harming performance and safety, especially on real robots.
 
@@ -34,10 +34,12 @@ In Contractive Diffusion Policies (CDPs), we address this by explicitly promotin
 
 > CDPs integrate with standard offline RL and imitation-learning backbones with minimal modification and computational overhead.
 
+> The efficiency stems from avoiding the Jacobian computation by approximating the largest eigen value backed by contraction theory.
+
 ![CDP advantage over diffusion policy baselines](project_assets/method.png)
 
 
-## Experiments
+### Experiments
 
 We evaluate CDPs extensively on continuous-control benchmarks (including D4RL and RoboMimic) and real-world robotic manipulation tasks. Across settings, CDPs often outperform non-contractive diffusion policies, with particularly strong gains in low-data regimes, supporting the view that contraction helps mitigate error accumulation in diffusion-based policy learning.
 
@@ -48,6 +50,10 @@ And in real world experiments, CDP perform better for tasks that require higher 
 ![CDP advantage over diffusion policy baselines](project_assets/results_real.png)
 
 ---
+
+### Thanks
+Thank you to my dear labmates and friends Charlotte, Mohamad, and Anas for helping every step of the way. 
+Special thanks to Hsiu-Chin Lin and Dave Meger who even worked over night and early morning before the submission deadline, and Gregory Dudek for his advice, especially during the rebuttals. 
 
 
 ### Citation
