@@ -25,9 +25,15 @@ menu:
         - name: Misc
           url: misc/
           weight: 3
+        # - name: Tunes
+        #   url: tunes/
+        #   weight: 4
+        - name: Gallery
+          url: gallery/
+          weight: 5
         - name: CV
           url: cv/
-          weight: 4
+          weight: 6
 
 params:
     description: "This website hosts Amin Abyaneh's research papers, books, course materials, data, curriculum vitae, and contact information."
@@ -37,17 +43,17 @@ params:
     defaultTheme: dark
     hideFooter: false
     disableThemeToggle: false
-    ShowShareButtons: false
-    ShowReadingTime: false
+    ShowShareButtons: true
+    ShowReadingTime: true
     disableSpecial1stPost: true
     disableAnchoredHeadings: true
-    ShowPostNavLinks: false
+    ShowPostNavLinks: true
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
     MainSections: ["papers", "blog"] # TODO: add projects later
     ShowToc: false
-    disableScrollToTop: true
+    disableScrollToTop: false
     TocOpen: true
     ShowWordCount: false
     UseHugoToc: true
@@ -56,10 +62,10 @@ params:
     profileMode:
           enabled: true
           title: Amin Abyaneh
-          subtitle: "PhD candidate in AI and Robotics at McGill and Mila. I want robots that can learn, reason, and act in the messy complexity of the real world. My research spans policy learning, through imitation, reinforcement learning, and diffusion-based methods, and world modeling, building internal representations of how environments evolve over time using autoregressive and diffusion models. I care about grounding these in the mathematics of dynamical systems to bring structure and reliability to learned behavior. Lately I have also been drawn to multimodal learning as a way to give robots richer, more complete pictures of their surroundings."
+          subtitle: "PhD candidate in AI and Robotics at McGill and Mila. My research spans policy learning, through imitation, reinforcement learning, and diffusion-based methods, and world modeling, building internal representations of how environments evolve over time using autoregressive and diffusion models. I care about grounding these in the mathematics of dynamical systems to bring structure and reliability to learned behavior. Lately I have also been drawn to multimodal learning as a way to give robots richer, more complete pictures of their surroundings.<br><br>Outside of research, I enjoy volleyball, Flamenco guitar, boxing, and the occasional run."
           imageUrl: "avatar.jpg"
-          imageWidth: 160
-          imageHeight: 160
+          imageWidth: 200
+          imageHeight: 200
           buttons:
             - name: Papers
               url: papers/

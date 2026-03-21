@@ -1,0 +1,8 @@
+- file: "/gallery/sample1.jpg"
+  caption: "Late night debugging session in the lab."
+
+- file: "/gallery/sample2.jpg"
+  caption: "Robot arm experiments at Mila."
+
+- file: "/gallery/sample3.jpg"
+  caption: "Group meeting with the team."

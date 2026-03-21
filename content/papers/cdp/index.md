@@ -1,5 +1,5 @@
 ---
-title: "Contractive Diffusion Policies: Robust Action Diffusion via Contractive Score-Based Sampling with Differential Equations"
+title: "Contractive Diffusion Policies"
 date: 2025-09-15
 tags: ["robotics","reinforcement learning","diffusion policies","contraction theory","stochastic differential equations"]
 venue: "ICLR 2026"
