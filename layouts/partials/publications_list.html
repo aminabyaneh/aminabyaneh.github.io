@@ -1,0 +1,36 @@
+{{- $papers := where site.RegularPages "Type" "papers" }}
+{{- $papers = $papers.ByDate.Reverse }}
+{{- if $papers }}
+<section class="pub-list-section">
+  <h2 class="pub-list-heading">Publications</h2>
+  {{- range $papers }}
+  <a class="pub-entry" href="{{ .Permalink }}">
+    {{- $cover := .Params.cover }}
+    {{- if $cover }}
+    <div class="pub-thumb">
+      {{- $imgSrc := "" }}
+      {{- if $cover.relative }}
+        {{- $imgSrc = printf "%s%s" .RelPermalink $cover.image }}
+      {{- else }}
+        {{- $imgSrc = $cover.image | absURL }}
+      {{- end }}
+      <img src="{{ $imgSrc }}" alt="{{ $cover.alt | default .Title }}" loading="lazy" />
+    </div>
+    {{- else }}
+    <div class="pub-thumb pub-thumb-empty"></div>
+    {{- end }}
+    <div class="pub-info">
+      {{- if .Params.venue }}
+      <span class="venue-tag">{{ .Params.venue }}</span>
+      {{- end }}
+      <div class="pub-title">{{ .Title }}</div>
+      {{- if .Params.author }}
+      <div class="pub-authors">
+        {{- .Params.author | replaceRE "Amin Abyaneh(\\*)?" "<strong>Amin Abyaneh$1</strong>" | safeHTML }}
+      </div>
+      {{- end }}
+    </div>
+  </a>
+  {{- end }}
+</section>
+{{- end }}

@@ -1,0 +1,23 @@
+- date: "Mar 2026"
+  type: "Paper"
+  text: "TacFiLM is out — tactile modality fusion for vision-language-action models, in collaboration with NVIDIA Research."
+
+- date: "Mar 2026"
+  type: "Paper"
+  text: "VOCALoco accepted to IEEE Robotics and Automation Letters (RA-L)."
+
+- date: "Mar 2026"
+  type: "Lecture"
+  text: "Guest lecture at COMP 765 (Robot Learning) on diffusion policies and contraction theory."
+
+- date: "Feb 2026"
+  type: "Lecture"
+  text: "Guest lecture at COMP 417 (Introduction to Robotics) on imitation learning and dynamical systems."
+
+- date: "Jan 2026"
+  type: "Paper"
+  text: "Contractive Diffusion Policies (CDP) accepted to ICLR 2026 — heading to Rio de Janeiro, Brazil."
+
+- date: "Jan 2025"
+  type: "Paper"
+  text: "Contractive Dynamical Imitation Policies accepted to ICLR 2025."

@@ -1,0 +1,495 @@
+{{- define "main" }}
+<style>
+  .cv-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 16px 60px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--primary);
+  }
+  .cv-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .cv-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+  .cv-header .cv-contact {
+    font-size: 13px;
+    color: var(--secondary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .cv-header .cv-contact a {
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  .cv-header .cv-contact a:hover {
+    color: var(--primary);
+  }
+  .cv-download {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 18px;
+    background: var(--darkcolor);
+    color: var(--theme);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  .cv-download:hover {
+    opacity: 0.85;
+  }
+  .cv-section {
+    margin-bottom: 28px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--entry);
+  }
+  .cv-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    cursor: pointer;
+    user-select: none;
+    background: var(--entry);
+  }
+  .cv-section-header:hover {
+    border-color: var(--darkcolor);
+  }
+  .cv-section-header h2 {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--primary);
+  }
+  .cv-toggle-icon {
+    font-size: 18px;
+    color: var(--secondary);
+    transition: transform 0.2s;
+    line-height: 1;
+  }
+  .cv-section.collapsed .cv-toggle-icon {
+    transform: rotate(-90deg);
+  }
+  .cv-section-body {
+    padding: 4px 18px 16px;
+    border-top: 1px solid var(--border);
+  }
+  .cv-section.collapsed .cv-section-body {
+    display: none;
+  }
+  .cv-overview {
+    color: var(--secondary);
+    font-size: 14px;
+    margin: 0;
+    padding: 2px 0;
+  }
+  .cv-entry {
+    margin: 14px 0;
+  }
+  .cv-entry-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .cv-entry-title {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .cv-entry-meta {
+    font-size: 12px;
+    color: var(--secondary);
+    white-space: nowrap;
+  }
+  .cv-entry-desc {
+    font-size: 13px;
+    color: var(--secondary);
+    margin-top: 3px;
+  }
+  .cv-pub {
+    margin: 12px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .cv-pub a {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--primary);
+    text-decoration: none;
+  }
+  .cv-pub a:hover {
+    text-decoration: underline;
+  }
+  .cv-pub-venue {
+    font-size: 12px;
+    color: var(--secondary);
+    margin-top: 2px;
+  }
+  .cv-pub-info {
+    flex: 1;
+  }
+  .venue-tag-sm {
+    display: inline-block;
+    background: var(--darkcolor);
+    color: var(--theme);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 1px 8px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .cv-skills-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 8px 16px;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .cv-skill-label {
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .cv-skill-value {
+    color: var(--secondary);
+  }
+  .cv-award {
+    margin: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .cv-award-left {}
+  .cv-award-name {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .cv-award-desc {
+    font-size: 13px;
+    color: var(--secondary);
+  }
+  .cv-award-meta {
+    font-size: 12px;
+    color: var(--secondary);
+    white-space: nowrap;
+  }
+  .cv-plain {
+    font-size: 13px;
+    color: var(--secondary);
+    margin-top: 8px;
+  }
+  .cv-reviewer-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cv-reviewer-row:last-child {
+    border-bottom: none;
+  }
+  .cv-reviewer-venue {
+    color: var(--primary);
+  }
+  .cv-reviewer-years {
+    color: var(--secondary);
+    white-space: nowrap;
+  }
+  @media (max-width: 540px) {
+    .cv-skills-grid {
+      grid-template-columns: 1fr;
+    }
+    .cv-entry-top {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<div class="cv-wrap">
+
+  {{/* ── Header ── */}}
+  <div class="cv-header">
+    <h1>Amin Soleimani Abyaneh</h1>
+    <div class="cv-contact">
+      <a href="mailto:amin.abyaneh@mail.mcgill.ca">amin.abyaneh@mail.mcgill.ca</a>
+      <span>Montreal, Canada</span>
+      <span>+1-(438)-5402240</span>
+    </div>
+    <a class="cv-download" href="/Resume_Amin_Abyaneh.pdf" download>Download PDF</a>
+  </div>
+
+  {{/* ── Overview ── */}}
+  <div class="cv-section" id="sec-overview">
+    <div class="cv-section-header" onclick="toggleSection('sec-overview')">
+      <h2>Overview</h2>
+      <span class="cv-toggle-icon">▾</span>
+    </div>
+    <div class="cv-section-body">
+      <p class="cv-overview">
+        PhD candidate at McGill University and Mila. My research focuses on reliable policy learning for robotic systems, drawing from robotics simulation and control, reinforcement and imitation learning, and generative policy modeling to develop intelligent systems that operate safely and reliably in the physical world.
+      </p>
+    </div>
+  </div>
+
+  {{/* ── Education ── */}}
+  <div class="cv-section" id="sec-education">
+    <div class="cv-section-header" onclick="toggleSection('sec-education')">
+      <h2>Education</h2>
+      <span class="cv-toggle-icon">▾</span>
+    </div>
+    <div class="cv-section-body">
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">McGill University &amp; Mila</span>
+          <span class="cv-entry-meta">Canada &nbsp;·&nbsp; 09/21 – 12/26 (expected)</span>
+        </div>
+        <div class="cv-entry-desc">Ph.D. candidate in Electrical and Computer Engineering, focused on robot learning &nbsp;—&nbsp; GPA: 4/4</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">Sharif University of Technology</span>
+          <span class="cv-entry-meta">Iran &nbsp;·&nbsp; 09/15 – 02/20</span>
+        </div>
+        <div class="cv-entry-desc">B.Sc. in Electrical Engineering, focused on digital systems &nbsp;—&nbsp; GPA: 3.7/4<br>Minor in Computer Science, focused on machine learning &nbsp;—&nbsp; GPA: 3.8/4</div>
+      </div>
+    </div>
+  </div>
+
+  {{/* ── Experience ── */}}
+  <div class="cv-section" id="sec-experience">
+    <div class="cv-section-header" onclick="toggleSection('sec-experience')">
+      <h2>Experience</h2>
+      <span class="cv-toggle-icon">▾</span>
+    </div>
+    <div class="cv-section-body">
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">Researcher — McGill University &amp; Mila</span>
+          <span class="cv-entry-meta">Canada &nbsp;·&nbsp; 09/21 – present</span>
+        </div>
+        <div class="cv-entry-desc">Developing methods that combine reinforcement and imitation learning with control-theoretic certificates to design policies with formal safety and stability guarantees.</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">Visiting Fellow — EPFL</span>
+          <span class="cv-entry-meta">Switzerland &nbsp;·&nbsp; 04/24 – 10/24</span>
+        </div>
+        <div class="cv-entry-desc">Addressed out-of-sample error accumulation in imitation learning using neural ODEs combined with contraction theory for robust recovery.</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">MITACS Research Intern — Sycodal Electronics Inc.</span>
+          <span class="cv-entry-meta">Canada &nbsp;·&nbsp; 11/23 – 11/24</span>
+        </div>
+        <div class="cv-entry-desc">Safe and robust reinforcement learning for industrial manipulation. Designed simulation environments in Isaac Sim with domain randomization to train policies that transfer to real hardware.</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">Researcher — Max Planck Institute for Intelligent Systems</span>
+          <span class="cv-entry-meta">Germany &nbsp;·&nbsp; 07/19–10/19, 01/21–02/22</span>
+        </div>
+        <div class="cv-entry-desc">Built a probabilistic simulation engine to model epidemic dynamics and assess control policies. Trained a tri-finger manipulator for object manipulation from vision using model-free RL.</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">Software Developer — Fanap Co.</span>
+          <span class="cv-entry-meta">Iran &nbsp;·&nbsp; 04/18 – 07/19</span>
+        </div>
+        <div class="cv-entry-desc">Developed secure payment applications in C/C++ on Linux-ARM embedded systems, deployed to around half a million customers.</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">Student Researcher — Artificial Creatures Lab</span>
+          <span class="cv-entry-meta">Iran &nbsp;·&nbsp; 07/18 – 12/19</span>
+        </div>
+        <div class="cv-entry-desc">Detection of diseased plants in vertical farming using ResNet-based vision architectures with a fuzzy control system for remediation.</div>
+      </div>
+    </div>
+  </div>
+
+  {{/* ── Publications ── */}}
+  <div class="cv-section" id="sec-pubs">
+    <div class="cv-section-header" onclick="toggleSection('sec-pubs')">
+      <h2>Selected Publications</h2>
+      <span class="cv-toggle-icon">▾</span>
+    </div>
+    <div class="cv-section-body">
+      <div class="cv-pub">
+        <span class="venue-tag-sm">ICLR 2026</span>
+        <div class="cv-pub-info">
+          <a href="/papers/cdp/">Contractive Diffusion Policies: Robust Action Diffusion via Contractive Score-Based Sampling</a>
+          <div class="cv-pub-venue"><strong>Amin Abyaneh</strong>, Charlotte Morissette, Mohamad Danesh, Anas Houssaini, David Meger, Gregory Dudek, Hsiu-Chin Lin</div>
+        </div>
+      </div>
+      <div class="cv-pub">
+        <span class="venue-tag-sm">ICLR 2025</span>
+        <div class="cv-pub-info">
+          <a href="/papers/scds/">Contractive Dynamical Imitation Policies for Efficient Out-of-Sample Recovery</a>
+          <div class="cv-pub-venue"><strong>Amin Abyaneh</strong>*, Mahrokh Boroujeni*, Hsiu-Chin Lin, Giancarlo Ferrari-Trecate</div>
+        </div>
+      </div>
+      <div class="cv-pub">
+        <span class="venue-tag-sm">ICRA 2024</span>
+        <div class="cv-pub-info">
+          <a href="/papers/gsnip/">Globally Stable Neural Imitation Policies</a>
+          <div class="cv-pub-venue"><strong>Amin Abyaneh</strong>, Mariana Sosa Guzmán, Hsiu-Chin Lin</div>
+        </div>
+      </div>
+      <div class="cv-pub">
+        <span class="venue-tag-sm">CoRL 2023</span>
+        <div class="cv-pub-info">
+          <a href="/papers/plyds/">Learning Lyapunov-Stable Polynomial Dynamical Systems Through Imitation</a>
+          <div class="cv-pub-venue"><strong>Amin Abyaneh</strong>, Hsiu-Chin Lin</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{/* ── Current Projects ── */}}
+  <div class="cv-section" id="sec-projects">
+    <div class="cv-section-header" onclick="toggleSection('sec-projects')">
+      <h2>Current Projects</h2>
+      <span class="cv-toggle-icon">▾</span>
+    </div>
+    <div class="cv-section-body">
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">Learning to Recover with Pretrained World Models</span>
+          <span class="cv-entry-meta">10/25 – present</span>
+        </div>
+        <div class="cv-entry-desc">Investigating the applications of pretrained Dreamer-style world models, with massive randomized training in simulation, in learning robust recovery behavior for robot learning.</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-top">
+          <span class="cv-entry-title">Multi-Modal Vision-Language-Action (VLA) Models</span>
+          <span class="cv-entry-meta">09/24 – present</span>
+        </div>
+        <div class="cv-entry-desc">Grounding pretrained tactile representations in VLA models for enhanced performance in dexterous manipulation.</div>
+      </div>
+    </div>
+  </div>
+
+  {{/* ── Skills ── */}}
+  <div class="cv-section" id="sec-skills">
+    <div class="cv-section-header" onclick="toggleSection('sec-skills')">
+      <h2>Technical Skills</h2>
+      <span class="cv-toggle-icon">▾</span>
+    </div>
+    <div class="cv-section-body">
+      <div class="cv-skills-grid">
+        <span class="cv-skill-label">Languages</span>
+        <span class="cv-skill-value">Python, C/C++, Java; familiar with R, Julia, Bash</span>
+        <span class="cv-skill-label">ML &amp; AI</span>
+        <span class="cv-skill-value">Reinforcement &amp; Imitation Learning, Representation Learning, Vision Transformers, LLMs, Diffusion Models, Energy-Based Models, Neural ODEs &amp; SDEs, Statistical Learning</span>
+        <span class="cv-skill-label">Robotics &amp; Control</span>
+        <span class="cv-skill-value">Robot Learning, Model-based Control, Kinematics &amp; Dynamics, System Identification, Motion Planning, Dexterous Manipulation, Domain Randomization, Distributed Systems</span>
+        <span class="cv-skill-label">Robots &amp; Sim</span>
+        <span class="cv-skill-value">ROS, PyBullet, Gazebo, Rviz, Isaac Sim, Isaac Lab, MuJoCo, Genesis Sim &nbsp;·&nbsp; Kinova (Link6, Jaco2, Gen3), Franka Panda, ANYmal C, DIGIT Tactile Sensor</span>
+      </div>
+    </div>
+  </div>
+
+  {{/* ── Awards ── */}}
+  <div class="cv-section" id="sec-awards">
+    <div class="cv-section-header" onclick="toggleSection('sec-awards')">
+      <h2>Recent Awards</h2>
+      <span class="cv-toggle-icon">▾</span>
+    </div>
+    <div class="cv-section-body">
+      <div class="cv-award">
+        <div class="cv-award-left">
+          <div class="cv-award-name">Fonds de recherche du Québec (FRQ)</div>
+          <div class="cv-award-desc">4-year fellowship awarded to distinguished PhD candidates in Quebec.</div>
+        </div>
+        <span class="cv-award-meta">Canada &nbsp;·&nbsp; 04/24</span>
+      </div>
+      <div class="cv-award">
+        <div class="cv-award-left">
+          <div class="cv-award-name">NCCR Automation Fellowship</div>
+          <div class="cv-award-desc">Awarded by the Swiss National Centers of Competence in Research to selected international researchers.</div>
+        </div>
+        <span class="cv-award-meta">Switzerland &nbsp;·&nbsp; 01/24</span>
+      </div>
+      <div class="cv-award">
+        <div class="cv-award-left">
+          <div class="cv-award-name">MITACS Accelerate Fellowship</div>
+          <div class="cv-award-desc">Awarded by MITACS Canada to conduct high-caliber research with an industrial partner.</div>
+        </div>
+        <span class="cv-award-meta">Canada &nbsp;·&nbsp; 09/23</span>
+      </div>
+      <div class="cv-award">
+        <div class="cv-award-left">
+          <div class="cv-award-name">Thomas and Penelope Deirdre Szirtes Fellowship in Engineering (SFE)</div>
+          <div class="cv-award-desc">Awarded by the Faculty of Engineering on the basis of academic merit to graduate students.</div>
+        </div>
+        <span class="cv-award-meta">Canada &nbsp;·&nbsp; 09/22</span>
+      </div>
+    </div>
+  </div>
+
+  {{/* ── Teaching ── */}}
+  <div class="cv-section" id="sec-teaching">
+    <div class="cv-section-header" onclick="toggleSection('sec-teaching')">
+      <h2>Teaching Assistant</h2>
+      <span class="cv-toggle-icon">▾</span>
+    </div>
+    <div class="cv-section-body">
+      <p class="cv-plain">McGill University: Applied Robotics (Head TA), Intelligent Robotics (Head TA), Linear Systems, Foundation Models in Robotics (Head TA)</p>
+    </div>
+  </div>
+
+  {{/* ── Reviewing ── */}}
+  <div class="cv-section" id="sec-review">
+    <div class="cv-section-header" onclick="toggleSection('sec-review')">
+      <h2>Conference Reviewer</h2>
+      <span class="cv-toggle-icon">▾</span>
+    </div>
+    <div class="cv-section-body">
+      <div style="margin-top: 8px;">
+        <div class="cv-reviewer-row">
+          <span class="cv-reviewer-venue">International Conference on Learning Representations (ICLR)</span>
+          <span class="cv-reviewer-years">2024, 2025</span>
+        </div>
+        <div class="cv-reviewer-row">
+          <span class="cv-reviewer-venue">Conference on Robot Learning (CoRL)</span>
+          <span class="cv-reviewer-years">2024</span>
+        </div>
+        <div class="cv-reviewer-row">
+          <span class="cv-reviewer-venue">IEEE Robotics and Automation Letters (RA-L)</span>
+          <span class="cv-reviewer-years">2024</span>
+        </div>
+        <div class="cv-reviewer-row">
+          <span class="cv-reviewer-venue">IEEE International Conference on Robotics and Automation (ICRA)</span>
+          <span class="cv-reviewer-years">2023, 2024, 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleSection(id) {
+    document.getElementById(id).classList.toggle('collapsed');
+  }
+</script>
+{{- end }}

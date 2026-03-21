@@ -117,3 +117,128 @@
     margin-bottom: 8px;
     letter-spacing: 0.03em;
 }
+
+/* Homepage publications list */
+.pub-list-section {
+    margin: 40px 0 20px;
+}
+
+.pub-list-heading {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--primary);
+}
+
+.pub-entry {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 14px;
+    margin-bottom: 12px;
+    background: var(--entry);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.1s, transform 0.1s;
+}
+
+.pub-entry:hover {
+    border-color: var(--darkcolor);
+    transform: translateY(-1px);
+}
+
+.pub-thumb {
+    flex: 0 0 40%;
+    width: 40%;
+    height: 150px;
+    border-radius: calc(var(--radius) - 2px);
+    overflow: hidden;
+    background: var(--border);
+}
+
+.pub-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pub-thumb-empty {
+    background: var(--border);
+}
+
+.pub-info {
+    flex: 0 0 60%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.pub-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--primary);
+}
+
+.pub-authors {
+    font-size: 13px;
+    color: var(--secondary);
+    line-height: 1.4;
+}
+
+/* Updates list */
+.update-entry {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: var(--entry);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.update-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 140px;
+    white-space: nowrap;
+}
+
+.update-left .venue-tag {
+    min-width: 70px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.update-date {
+    font-size: 12px;
+    color: var(--secondary);
+    font-weight: 500;
+    min-width: 60px;
+}
+
+.update-text {
+    font-size: 14px;
+    color: var(--primary);
+    line-height: 1.5;
+}
+
+@media (max-width: 500px) {
+    .pub-entry {
+        flex-direction: column;
+    }
+    .pub-thumb {
+        width: 100%;
+        height: 180px;
+        flex: none;
+    }
+}

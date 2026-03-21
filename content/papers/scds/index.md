@@ -25,37 +25,43 @@ cover:
 
 ### A summer at NCCR and EPFL
 
-This work grew out of a research visit to EPFL, made possible by [NCCR's Visiting Researcher's Fellowship](https://nccr-automation.ch/research-fellowship). The collaboration with [Mahrokh G. Boroujeni](https://people.epfl.ch/mahrokh.ghoddousiboroujeni?lang=en) and Prof. [Giancarlo Ferrari-Trecate](https://www.epfl.ch/labs/decode/) at EPFL's Laboratoire d'Automatique was central to everything here, as equal contributors in the truest sense.
+This work came out of a research visit to EPFL, supported by [NCCR's Visiting Researcher's Fellowship](https://nccr-automation.ch/research-fellowship). Working closely with [Mahrokh G. Boroujeni](https://people.epfl.ch/mahrokh.ghoddousiboroujeni?lang=en) and Prof. [Giancarlo Ferrari-Trecate](https://www.epfl.ch/labs/decode/) at EPFL's Laboratoire d'Automatique was a genuine pleasure. Mahrokh and I contributed equally to everything here.
 
-### The problem: imitation learning breaks out-of-sample
+<div style="display: flex; justify-content: center; margin: 24px 0;">
+  <img src="featured.png" alt="SCDS concept illustration" style="width: 65%; border-radius: 6px;">
+</div>
 
-Imitation learning policies learn from expert demonstrations and work well near the training distribution. But robots get perturbed. When they drift out-of-sample, most policies have no recovery guarantee, not even on *how fast* they return, let alone whether they do at all.
+### When the robot drifts off track
 
-Prior work using stable dynamical systems guarantees eventual convergence to a goal, but says nothing about **transient behavior**: how the robot moves on its way back. This gap matters in practice.
+Imitation learning works by having the robot copy expert demonstrations. It tends to do well near trajectories it has seen before, but real robots get bumped, slip, and drift. When that happens, most policies have no way to reason about recovery. They might converge back eventually, or they might not.
 
-### Our approach: contractivity as a stronger guarantee
+Earlier work addressed this with stable dynamical systems, which at least guarantee eventual convergence to a goal. But stability says nothing about what happens on the way back: how fast, how smoothly, or whether the path taken is even reasonable. That gap matters when you care about real execution.
 
-We model the policy as a **contractive dynamical system**, a stronger condition than stability. Contraction means that any two trajectories starting from different initial conditions (or after a perturbation) actively pull toward each other over time. This gives certificates on both convergence *and* transient behavior.
+### Contractivity: a stronger handle on behavior
 
-The policy architecture has three components that work together:
+We model the policy as a **contractive dynamical system**. Contraction is a stronger property than stability: instead of just saying trajectories end up at the same place, it says they actively pull toward each other throughout the motion. Two rollouts starting from different initial conditions will converge, and we can say how fast.
 
-- **REN module:** a recurrent equilibrium network that enforces contractivity by construction, for any choice of parameters
+This gives us certificates on both convergence and transient behavior, not just the endpoint.
+
+The policy is built from three pieces that compose cleanly:
+
+- **REN module:** a recurrent equilibrium network that is contractive by construction, for any parameter values
 - **Linear transformation:** adjusts the dimensionality of the latent space
-- **Bijection block:** boosts expressive power while preserving the contraction property
+- **Bijection block:** adds expressive power without breaking the contraction property
 
-Because contractivity is baked into the architecture, training is **unconstrained optimization** with no projection steps or Lyapunov feasibility checks needed.
+Because the architecture handles contractivity automatically, training is plain unconstrained optimization. No projection steps, no Lyapunov feasibility checks, no constrained solver.
 
 ![SCDS design overview](scds_overview.png)
 
-> We also derive theoretical upper bounds on worst-case and expected loss, grounding the empirical results in formal guarantees.
+> We also derive upper bounds on worst-case and expected imitation loss, connecting the empirical results to formal guarantees.
 
 ### Results
 
-After training on expert demonstrations, SCDS policies can be deployed directly with a low-level controller. Contractivity ensures reliable execution and efficient recovery from perturbations across the board.
+SCDS policies are trained on expert demonstrations and deployed directly with a low-level controller. The contraction guarantee means recovery from perturbations is reliable across all tested scenarios.
 
 ![SCDS results on LASA benchmark](scds_lasa_policies.png)
 
-We evaluate on manipulation and navigation tasks using Franka Panda and Clearpath Jackal robots in Isaac Lab, demonstrating that the approach scales to realistic robotic settings.
+We tested on manipulation and navigation tasks using a Franka Panda arm and a Clearpath Jackal robot in Isaac Lab, and the approach holds up in both settings.
 
 ![SCDS simulation in Isaac Lab](scds_simreal.png)
 

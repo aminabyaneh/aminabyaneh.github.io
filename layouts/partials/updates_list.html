@@ -1,0 +1,15 @@
+{{- $updates := site.Data.updates }}
+{{- if $updates }}
+<section class="pub-list-section">
+  <h2 class="pub-list-heading">Latest Updates</h2>
+  {{- range $updates }}
+  <div class="update-entry">
+    <div class="update-left">
+      <span class="venue-tag">{{ .type }}</span>
+      <span class="update-date">{{ .date }}</span>
+    </div>
+    <div class="update-text">{{ .text }}</div>
+  </div>
+  {{- end }}
+</section>
+{{- end }}

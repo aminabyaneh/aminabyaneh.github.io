@@ -25,6 +25,9 @@ menu:
         - name: Misc
           url: misc/
           weight: 3
+        - name: CV
+          url: cv/
+          weight: 4
 
 params:
     description: "This website hosts Amin Abyaneh's research papers, books, course materials, data, curriculum vitae, and contact information."
@@ -53,7 +56,7 @@ params:
     profileMode:
           enabled: true
           title: Amin Abyaneh
-          subtitle: "I am a PhD candidate in AI and Robotics at McGill University and Mila. My research focuses on physical intelligence through learning dynamical systems to enable sequential decision making with data-driven models. I study how agents can build internal world models that capture the structure and evolution of their environments, enabling prediction, planning, and control under uncertainty. By bridging dynamical systems, probabilistic modeling, and modern generative methods, I aim to develop principled learning algorithms that scale to real-world decision-making problems."
+          subtitle: "PhD candidate in AI and Robotics at McGill and Mila. I want robots that can learn, reason, and act in the messy complexity of the real world. My research spans policy learning, through imitation, reinforcement learning, and diffusion-based methods, and world modeling, building internal representations of how environments evolve over time using autoregressive and diffusion models. I care about grounding these in the mathematics of dynamical systems to bring structure and reliability to learned behavior. Lately I have also been drawn to multimodal learning as a way to give robots richer, more complete pictures of their surroundings."
           imageUrl: "avatar.jpg"
           imageWidth: 160
           imageHeight: 160
@@ -62,6 +65,8 @@ params:
               url: papers/
             - name: Blog
               url: blog/
+            - name: CV
+              url: cv/
             - name: Misc
               url: misc/
 
