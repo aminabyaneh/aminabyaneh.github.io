@@ -1,5 +1,5 @@
 ---
-title: "VOCALoco: Viability-Optimized Cost-aware Adaptive Locomotion"
+title: "VOCALoco: Viability-Optimized Cost-Aware Adaptive Locomotion"
 date: 2025-06-14
 tags: ["robotics","legged robots","reinforcement learning","skill switching","staircases","perception","cost of transport"]
 venue: "RA-L 2026"
