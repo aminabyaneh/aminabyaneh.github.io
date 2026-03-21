@@ -4,6 +4,6 @@
 {{- if (or (eq $author_type "[]string") (eq $author_type "[]interface {}")) }}
 {{- (delimit $author ",&thinsp;" | safeHTML ) }}
 {{- else }}
-{{- $author }}
+{{- $author | replaceRE "Amin Abyaneh(\\*)?" "<strong>Amin Abyaneh$1</strong>" | safeHTML }}
 {{- end }}
 {{- end -}}

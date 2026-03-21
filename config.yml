@@ -21,6 +21,9 @@ menu:
         #   weight: 2
         - name: Blog
           url: blog/
+          weight: 2
+        - name: Misc
+          url: misc/
           weight: 3
 
 params:
@@ -57,10 +60,10 @@ params:
           buttons:
             - name: Papers
               url: papers/
-            - name: Projects
-              url: projects/
             - name: Blog
               url: blog/
+            - name: Misc
+              url: misc/
 
     socialIcons:
         - name: Email

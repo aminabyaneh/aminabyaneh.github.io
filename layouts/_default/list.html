@@ -64,6 +64,11 @@
       {{- end }}
     </h2>
   </header>
+  {{- if .Params.venue }}
+  <div class="entry-venue">
+    <span class="venue-tag">{{ .Params.venue }}</span>
+  </div>
+  {{- end }}
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>

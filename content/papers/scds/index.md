@@ -2,12 +2,13 @@
 title: "Contractive Dynamical Imitation Policies for Efficient Out-of-Sample Recovery"
 date: 2025-01-15
 tags: ["robotics","reinforcement learning","diffusion policies","contraction theory","stochastic differential equations"]
-author: "Amin Abyaneh, Mahrokh Boroujeni, Hsiu-Chin Lin, Giancarlo Ferrari-Trecate"
+venue: "ICLR 2025"
+author: "Amin Abyaneh*, Mahrokh Boroujeni*, Hsiu-Chin Lin, Giancarlo Ferrari-Trecate"
 description: "Learning contractive dynamical systems with neural ODEs for imitation."
-symmary: "We introduce a class of contractive imitation policies with theoretical guarantees and out-of-sample error bounds for robot learning."
+summary: "Imitation learning policies often fail when robots drift out-of-sample. We propose SCDS, a framework that models policies as contractive dynamical systems, ensuring all rollouts converge regardless of perturbations. The architecture guarantees contractivity by construction, enabling unconstrained optimization. We also provide formal bounds on worst-case and expected loss, and demonstrate strong out-of-sample recovery on manipulation and navigation tasks."
 cover:
-    image: "featured.png"
-    alt: "Learning contractive dynamical systems with neural ODEs for imitation."
+    image: "scds_overview.png"
+    alt: "SCDS design overview"
     relative: true
 
 ---
@@ -16,56 +17,60 @@ cover:
 
 ### Links
 
-+ [Paper]('https://openreview.net/pdf?id=lILEtkWOXD')
++ [Paper](https://openreview.net/pdf?id=lILEtkWOXD)
 + [Project page](https://sites.google.com/view/contractive-dynamical-policies)
 + [Slides](https://gamma.app/docs/Contractive-Dynamical-Imitation-Policies-for-Efficient-Out-of-Sam-lvmoigk6846tu9a)
 
 ---
 
-### Summer at NCCR and EPFL
-This work is the result of an amazing collaboration with EPFL and NCCR Automation. The project's contributions are owed to dedicated work and ideas of senior PhD candidate, [Mahrokh G. Boroujeni](https://people.epfl.ch/mahrokh.ghoddousiboroujeni?lang=en), and Prof. [Giancarlo Ferrari-Trecate](https://www.epfl.ch/labs/decode/), both from EPFL's Laboratoire d'Automatique. 
+### A summer at NCCR and EPFL
 
-Special thanks to [NCCR's Visiting Researcher's Fellowship](https://nccr-automation.ch/research-fellowship) and EPFL's hospitality for arranging a productive work environment throughout my stay.
+This work grew out of a research visit to EPFL, made possible by [NCCR's Visiting Researcher's Fellowship](https://nccr-automation.ch/research-fellowship). The collaboration with [Mahrokh G. Boroujeni](https://people.epfl.ch/mahrokh.ghoddousiboroujeni?lang=en) and Prof. [Giancarlo Ferrari-Trecate](https://www.epfl.ch/labs/decode/) at EPFL's Laboratoire d'Automatique was central to everything here, as equal contributors in the truest sense.
 
-### Summary of the work
+### The problem: imitation learning breaks out-of-sample
 
-Imitation learning is a data-driven approach to learning policies from expert behavior, but it is prone to unreliable outcomes in out-of-sample (OOS) regions. While previous research relying on stable dynamical systems guarantees convergence to a desired state, it often overlooks transient behavior. We propose a framework for learning policies modeled by contractive dynamical systems, ensuring that all policy rollouts converge regardless of perturbations, and in turn, enable efficient OOS recovery. By leveraging recurrent equilibrium networks and coupling layers, the policy structure guarantees contractivity for any parameter choice, which facilitates unconstrained optimization. We also provide theoretical upper bounds for worst-case and expected loss to rigorously establish the reliability of our method in deployment. Empirically, we demonstrate substantial OOS performance improvements for simulated robotic manipulation and navigation tasks.
+Imitation learning policies learn from expert demonstrations and work well near the training distribution. But robots get perturbed. When they drift out-of-sample, most policies have no recovery guarantee, not even on *how fast* they return, let alone whether they do at all.
 
+Prior work using stable dynamical systems guarantees eventual convergence to a goal, but says nothing about **transient behavior**: how the robot moves on its way back. This gap matters in practice.
 
-### Method overview
-The contraction property enables efficient out-of-sample recovery, especially in the face of perturbations. By utilizing contractive policies, we extend beyond the typical convergence guarantees of stable dynamical systems, offering certificates on the transient behavior of induced trajectories in addition to global convergence guarantees. We achieve notable improvements in out-of-sample recovery for various robots in navigation and manipulation tasks.
+### Our approach: contractivity as a stronger guarantee
 
-There are three main steps in learning contractive policies with SCDS:
+We model the policy as a **contractive dynamical system**, a stronger condition than stability. Contraction means that any two trajectories starting from different initial conditions (or after a perturbation) actively pull toward each other over time. This gives certificates on both convergence *and* transient behavior.
 
+The policy architecture has three components that work together:
 
- - Initial conditions are passed to the differentiable Neural ODE solver to generate state trajectories.
+- **REN module:** a recurrent equilibrium network that enforces contractivity by construction, for any choice of parameters
+- **Linear transformation:** adjusts the dimensionality of the latent space
+- **Bijection block:** boosts expressive power while preserving the contraction property
 
- - A tailor-made loss penalizes the discrepancy of the generate and expert trajectories, and updates the policy parameters.
-
- - Within the contractive policy, the REN module ensures contraction, the linear transformation adjusts the dimension of the latent space, and the bijection block boosts the policy's expressive power while preserving contraction properties.
+Because contractivity is baked into the architecture, training is **unconstrained optimization** with no projection steps or Lyapunov feasibility checks needed.
 
 ![SCDS design overview](scds_overview.png)
 
-### Summary of results
-After training on expert demonstrations, the policy can be deployed with a low-level controller. The contractivity and, in turn, global stability of the policy facilitates reliable execution and out-of-sample recovery.
+> We also derive theoretical upper bounds on worst-case and expected loss, grounding the empirical results in formal guarantees.
 
-![SCDS results summary](scds_lasa_policies.png)
+### Results
 
-Theoretically, our method can be deployed for planning in various robotics systems and scenarios. We explore such use case for manipulation and navigation on Franka Panda and Clearpath Jackal robots, respectively.
+After training on expert demonstrations, SCDS policies can be deployed directly with a low-level controller. Contractivity ensures reliable execution and efficient recovery from perturbations across the board.
+
+![SCDS results on LASA benchmark](scds_lasa_policies.png)
+
+We evaluate on manipulation and navigation tasks using Franka Panda and Clearpath Jackal robots in Isaac Lab, demonstrating that the approach scales to realistic robotic settings.
 
 ![SCDS simulation in Isaac Lab](scds_simreal.png)
 
+---
 
-### Reviews
-In case you are interested in the review process, check [**this page**](https://openreview.net/forum?id=lILEtkWOXD&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2025%2FConference%2FAuthors%23your-submissions)).
+### Peer review
+
+Curious about the review process? The full discussion is public on [**OpenReview**](https://openreview.net/forum?id=lILEtkWOXD&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2025%2FConference%2FAuthors%23your-submissions)).
 
 ### What is ICLR?
-ICLR is the premier gathering of professionals dedicated to the advancement of the branch of artificial intelligence called representation learning. [**Check out their website for detailed info of ICLR in recent years!**](https://iclr.cc/)
-
+ICLR is the premier venue for research on representation learning and deep learning. [**Check out their website!**](https://iclr.cc/)
 
 ### Citation
 
-"Contractive Diffusion Policies: Robust Action Diffusion via Contractive Score-Based Sampling with Differential Equations." ICLR 2026, under review.
+`* equal contribution`
 
 ```latex
 @inproceedings{abyaneh2025contractive,
