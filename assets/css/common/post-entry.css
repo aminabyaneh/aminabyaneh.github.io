@@ -120,7 +120,11 @@
 
 /* Homepage publications list */
 .pub-list-section {
-    margin: 40px 0 20px;
+    margin: 20px 0 20px;
+}
+
+.pub-list-section-publications {
+    margin-top: 32px;
 }
 
 .pub-list-heading {

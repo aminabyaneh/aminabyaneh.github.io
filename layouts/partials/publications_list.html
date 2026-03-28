@@ -1,7 +1,7 @@
 {{- $papers := where site.RegularPages "Type" "papers" }}
 {{- $papers = $papers.ByDate.Reverse }}
 {{- if $papers }}
-<section class="pub-list-section">
+<section class="pub-list-section pub-list-section-publications">
   <h2 class="pub-list-heading">Publications</h2>
   {{- range $papers }}
   <a class="pub-entry" href="{{ .Permalink }}">
