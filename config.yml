@@ -92,6 +92,7 @@ params:
     cover:
         hiddenInList: false
         hiddenInSingle: true
+        responsiveImages: false
     label:
       text: "Amin Abyaneh"
       icon: icon.ico
