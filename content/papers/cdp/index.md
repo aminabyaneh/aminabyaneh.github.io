@@ -7,8 +7,8 @@ author: Amin Abyaneh, Charlotte Morissette, Mohamad Danesh, Anas Houssaini, Davi
 description: "Contractive Diffusion Policies (CDPs) promote contraction in the diffusion sampling dynamics for offline policy learning, improving robustness to solver and score-matching errors while reducing unwanted action variance."
 summary: "CDPs add a simple contraction regularizer to diffusion policies, pulling nearby sampling trajectories together to suppress solver and score-matching errors. This yields more robust action generation in offline RL and imitation learning, especially in low-data regimes."
 cover:
-    image: "project_assets/concept.png"
-    alt: "Concept: contraction in diffusion sampling"
+    image: "project_assets/cdp_thumbnail.gif"
+    alt: "Contractive Diffusion Policies"
     relative: true
 
 ---

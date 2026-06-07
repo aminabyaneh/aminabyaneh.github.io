@@ -7,8 +7,8 @@ author: "Stanley Wu, Mohamad H. Danesh, Simon Li, Hanna Yurchyk, Amin Abyaneh, A
 description: "A modular skill-selection framework that predicts viability and cost-of-transport from heightmaps to safely and efficiently switch between walking and stair-climbing on quadrupedal robots."
 summary: "VOCALoco predicts the viability and cost of transport for several pretrained locomotion skills from local heightmaps, then executes the safest, most efficient one. It improves robustness on stairs and transfers zero-shot to real hardware."
 cover:
-    image: "vocaloco_design.png"
-    alt: "VOCALoco design overview"
+    image: "assets_paper/thumbnail.gif"
+    alt: "VOCALoco zero-shot locomotion"
     relative: true
 ---
 
@@ -17,6 +17,7 @@ cover:
 ### Links
 
 + [Paper](https://arxiv.org/pdf/2510.23997)
++ [arXiv](https://arxiv.org/abs/2510.23997)
 + [Project page](https://sites.google.com/view/vocaloco)
 
 ---

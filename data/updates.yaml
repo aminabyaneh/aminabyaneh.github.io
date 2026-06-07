@@ -1,23 +1,33 @@
+- date: "Jun 2026"
+  type: "Paper"
+  text: "Drift Q-Learning is out, a single-pass offline RL method that replaces denoising chains with a learned drift field."
+  url: "/papers/driftql/"
+
+- date: "Jun 2026"
+  type: "Paper"
+  text: "QWM is out, a hardware-agnostic quadrupedal world model that transfers zero-shot to unseen robot morphologies."
+  url: "/papers/qwm/"
+
 - date: "Mar 2026"
   type: "Paper"
-  text: "TacFiLM is out — tactile modality fusion for vision-language-action models, in collaboration with NVIDIA Research."
+  text: "TacFiLM is out, tactile modality fusion for vision-language-action models, in collaboration with NVIDIA Research."
+  url: "/papers/tacfilm/"
 
 - date: "Mar 2026"
   type: "Paper"
   text: "VOCALoco accepted to IEEE Robotics and Automation Letters (RA-L)."
+  url: "/papers/vocaloco/"
 
 - date: "Mar 2026"
   type: "Lecture"
   text: "Guest lecture at COMP 765 (Robot Learning) on diffusion policies and contraction theory."
 
-- date: "Feb 2026"
-  type: "Lecture"
-  text: "Guest lecture at COMP 417 (Introduction to Robotics) on imitation learning and dynamical systems."
-
 - date: "Jan 2026"
   type: "Paper"
   text: "Contractive Diffusion Policies (CDP) accepted to ICLR 2026 — heading to Rio de Janeiro, Brazil."
+  url: "/papers/cdp/"
 
 - date: "Jan 2025"
   type: "Paper"
   text: "Contractive Dynamical Imitation Policies accepted to ICLR 2025."
+  url: "/papers/scds/"

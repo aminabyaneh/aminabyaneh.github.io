@@ -8,7 +8,9 @@
       <span class="venue-tag">{{ .type }}</span>
       <span class="update-date">{{ .date }}</span>
     </div>
-    <div class="update-text">{{ .text }}</div>
+    <div class="update-text">
+      {{- if .url }}<a href="{{ .url }}">{{ .text }}</a>{{- else }}{{ .text }}{{- end }}
+    </div>
   </div>
   {{- end }}
 </section>

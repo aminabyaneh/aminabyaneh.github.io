@@ -7,8 +7,8 @@ author: "Amin Abyaneh, Hsiu-Chin Lin"
 description: "We present an approach for learning policies represented by globally stable nonlinear dynamical systems."
 symmary: "We present an approach for learning policies represented by globally stable nonlinear dynamical systems. We model the nonlinear dynamical system as a parametric polynomial and learn the polynomial's coefficients jointly with a learnable Lyapunov candidate to guarantee stability and predictability of the policy."
 cover:
-    image: "plyds_overview.png"
-    alt: "PLYDS design overview"
+    image: "plyds_thumbnail.gif"
+    alt: "PLYDS overview"
     relative: true
 
 ---

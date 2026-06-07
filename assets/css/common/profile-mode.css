@@ -22,6 +22,11 @@
     font-size: 2.5rem;
 }
 
+.profile .profile_inner span {
+    text-align: justify;
+    display: block;
+}
+
 .profile img {
     border-radius: 50%;
     border: 1px solid var(--tertiary);

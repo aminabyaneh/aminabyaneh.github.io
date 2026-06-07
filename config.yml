@@ -62,7 +62,7 @@ params:
     profileMode:
           enabled: true
           title: Amin Abyaneh
-          subtitle: "PhD candidate in AI and Robotics at McGill and Mila. My research spans policy learning, through imitation, reinforcement learning, and diffusion-based methods, and world modeling, building internal representations of how environments evolve over time using autoregressive and diffusion models. I care about grounding these in the mathematics of dynamical systems to bring structure and reliability to learned behavior. Lately I have also been drawn to multimodal learning as a way to give robots richer, more complete pictures of their surroundings.<br><br>Outside of research, I enjoy volleyball, Flamenco guitar, boxing, and the occasional run."
+          subtitle: "I'm a PhD candidate in AI and Robotics at McGill and Mila, advised by Prof. Hsiu-Chin Lin, where I work on robot learning, reinforcement learning, and world modeling. Early in my PhD, I focused on motion planning with provable stability guarantees grounded in the theory of dynamical systems. That foundation still shapes how I work: I'm especially drawn to diffusion-based methods and to grounding modern architectures in the same mathematics, which brings structure and reliability to learned behavior. More recently, I've turned toward multimodal learning as a way to give robots richer, more complete pictures of their surroundings, particularly by learning from tactile signals and contact forces.<br><br>Outside of research, I enjoy volleyball, Flamenco guitar, boxing, and the occasional run."
           imageUrl: "avatar.jpg"
           imageWidth: 200
           imageHeight: 200
