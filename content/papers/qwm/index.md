@@ -1,5 +1,5 @@
 ---
-title: "Toward Hardware-Agnostic Quadrupedal World Models via Morphology Conditioning"
+title: "Toward Hardware-Agnostic Quadrupedal World Models"
 date: 2026-04-01
 tags: ["robotics", "world models", "quadrupedal locomotion", "morphology", "reinforcement learning", "zero-shot transfer"]
 venue: "Preprint 2026"
