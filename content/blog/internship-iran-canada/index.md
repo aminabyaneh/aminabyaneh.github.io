@@ -8,7 +8,7 @@ description: "A few hard-learned notes on navigating internship applications as 
 summary: "After a genuinely frustrating internship search as an Iranian PhD student in Canada, I wanted to share some things I wish someone had told me earlier. If you are in a similar situation, I hope this saves you some time and heartache."
 ---
 
-If you are an Iranian student doing your PhD in Canada, and you are thinking about applying for internships, I want to share a few things I learned the hard way. This is not a rant, though I will admit some of it was frustrating. It is more of a honest heads-up, written with the hope that it helps someone else navigate this more smoothly than I did.
+If you are Iranian, or from another country affected by US sanctions, and you are considering coming to Canada for a PhD in Robotics or AI, or you are already here and starting to think about internships, this post is for you. I want to share a few things I learned the hard way. This is not a rant, though I will admit some of it was frustrating. It is more of an honest heads-up, written with the hope that it helps someone else navigate this more smoothly than I did.
 
 ### The residency wall
 
@@ -16,9 +16,11 @@ Canada is generally a welcoming country, but it has a quirk that catches a lot o
 
 Without permanent residency, you are considered a foreign national, and that classification has real consequences when it comes to internships.
 
+There is also the work permit issue. A Canadian study permit only allows you to work a limited number of hours per week, which most internships far exceed. To do a full-time internship, you typically need a separate work permit, and obtaining one can take months. This is not a small administrative hurdle. It can easily eat into your internship timeline or cause you to miss application windows entirely if you do not plan well in advance.
+
 ### US export control laws reach into Canada
 
-Here is the part that surprised me most. Even if you are applying to a company based in Canada, or anywhere outside the United States, US export control regulations can still apply. These laws restrict access to certain technologies and research areas for nationals of specific countries, and Iran is on that list.
+Here is the part that surprised me most. Even if you are applying to a company based in Canada, or anywhere outside the United States, US export control regulations can still apply. These laws restrict access to certain technologies and research areas for nationals of specific countries, and Iran is on that list. Robotics and AI fall squarely within the scope of these restrictions, which means the very fields you are training in are the ones most likely to trigger a compliance review.
 
 In practice, this means companies will sometimes reject your application outright, even after you have cleared interviews. I experienced this personally with Amazon and Meta. You do well in the process, things feel promising, and then you get a short email explaining they cannot proceed due to export control compliance. It is a cold way to find out.
 
