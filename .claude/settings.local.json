@@ -2,7 +2,33 @@
   "permissions": {
     "allow": [
       "Bash(grep -E \"\\\\.\\(js|ts|scss\\)$\")",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "WebFetch(domain:driftql.github.io)",
+      "WebFetch(domain:modanesh.github.io)",
+      "Bash(git -C /home/amin/Projects/aminabyaneh.github.io status)",
+      "Bash(git -C /home/amin/Projects/aminabyaneh.github.io diff)",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git reset *)",
+      "Bash(git restore *)",
+      "Bash(sudo apt-get install -y gifsicle)",
+      "Bash(ffmpeg -i /home/amin/Projects/aminabyaneh.github.io/content/papers/qwm/project_assets/thumbnail.gif -vf \"fps=10,scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128[p];[s1][p]paletteuse=dither=bayer\" -y /home/amin/Projects/aminabyaneh.github.io/content/papers/qwm/project_assets/thumbnail_compressed.gif)",
+      "Bash(ffmpeg -i /home/amin/Projects/aminabyaneh.github.io/content/papers/vocaloco/assets_paper/thumbnail.gif -vf \"fps=10,scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen=max_colors=128[p];[s1][p]paletteuse=dither=bayer\" -y /home/amin/Projects/aminabyaneh.github.io/content/papers/vocaloco/assets_paper/thumbnail_compressed.gif)",
+      "Bash(gh run *)",
+      "Bash(hugo --minify)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(/usr/local/bin/hugo --minify)",
+      "Bash(git -C /home/amin/Projects/aminabyaneh.github.io submodule status)",
+      "Bash(git -C /home/amin/Projects/aminabyaneh.github.io log --oneline -3)",
+      "Bash(git -C /home/amin/Projects/aminabyaneh.github.io ls-files themes/PaperMod)",
+      "WebFetch(domain:aminabyaneh.github.io)",
+      "Bash(curl -s \"https://api.github.com/repos/aminabyaneh/aminabyaneh.github.io/actions/runs?per_page=5\")",
+      "Bash(python3 -c \"import sys,json; runs=json.load\\(sys.stdin\\)['workflow_runs']; [print\\(r['status'], r['conclusion'], r['created_at'], r['name']\\) for r in runs]\")",
+      "Bash(curl -s \"https://api.github.com/repos/aminabyaneh/aminabyaneh.github.io/pages\")",
+      "Bash(python3 -c \"import sys,json; p=json.load\\(sys.stdin\\); print\\('source:', p.get\\('source'\\)\\); print\\('build_type:', p.get\\('build_type'\\)\\); print\\('status:', p.get\\('status'\\)\\)\")",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
